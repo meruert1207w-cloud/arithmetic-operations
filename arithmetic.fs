@@ -1,12 +1,15 @@
 module Arithmetic =
-    let add a b = a + b
+    let add (a: float) (b: float) : float =
+        a + b
 
-    let subtract a b = a - b
+    let subtract (a: float) (b: float) : float =
+        a - b
 
-    let multiply a b = a * b
+    let multiply (a: float) (b: float) : float =
+        a * b
 
-    let divide a b =
-        if b = 0 then
+    let divide (a: float) (b: float) : Result<float, string> =
+        if b = 0.0 then
             Error "Division by zero is not allowed."
         else
             Ok (a / b)
